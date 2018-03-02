@@ -56,6 +56,27 @@ public class Main {
 					break;
 					
 			case 2:
+				System.out.print("Digite o seu username: ");
+				username = entrada.nextLine().toUpperCase();
+				int index = -1;
+				for(int i = 0; i < usuarios.size(); i++) {
+					if(username.equals(usuarios.get(i))) 
+						index = i;
+				}
+				
+				if(index == -1) 
+					System.out.println("Este username nao se refere a algum usuario do sistema");
+				else {
+					System.out.print("Digite a sua senha: ");
+					senha = entrada.nextLine();
+					if (!senha.equals(usuarios.get(index).getSenha()))
+						System.out.println("Senha invalida!");
+					else {
+						usuarios.get(index).editarConta();
+					}
+				}
+				
+				break;
 				
 			case 3:
 
