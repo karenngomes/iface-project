@@ -52,6 +52,7 @@ public class Usuario {
 	public void setSenha(String senha) {
 		int flag = 1;
 		do {
+			
 			System.out.print("Digite a senha novamente: ");
 			String senhaConfirma = entrada.next();
 			if(senha.equals(senhaConfirma)) {
@@ -100,24 +101,25 @@ public class Usuario {
 		
 		switch(opcao) {
 			case 1: 
-				String nome = entrada.nextLine();
+				String nome = entrada.next();
 				this.setNome(nome);
 				break;
 			case 2: 
-				String sobrenome = entrada.nextLine();
+				String sobrenome = entrada.next();
 				this.setNome(sobrenome);
 				break;
 			case 3: 
-				String username = entrada.nextLine();
+				String username = entrada.next();
 				this.setNome(username);
 				break;
 			case 4:
-				String senha = entrada.nextLine();
+				System.out.print("Digite a nova senha: ");
+				String senha = entrada.next();
 				this.setSenha(senha);
 				break;
 			case 5:
 				System.out.println("Fale mais sobre voce!");
-				String sobre = entrada.nextLine();
+				String sobre = entrada.next();
 				this.setSobre(sobre);
 				break;
 			case 6:

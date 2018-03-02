@@ -17,10 +17,11 @@ public class Main {
 		
 		usuarios.add(nome1);
 		usuarios.add(nome2);
+		System.out.println(usuarios.get(0).getNome());
 		
 		
 		do {
-			System.out.println("Bem-vindo ao Iface!");
+			System.out.println("Bem-vindo ao iFace!");
 			System.out.println("- Digite a opção desejada -");
 			System.out.println("[1] Criar conta");
 			System.out.println("[2] Editar perfil");
@@ -57,18 +58,19 @@ public class Main {
 					
 			case 2:
 				System.out.print("Digite o seu username: ");
-				username = entrada.nextLine().toUpperCase();
+				username = entrada.next().toUpperCase();
 				int index = -1;
 				for(int i = 0; i < usuarios.size(); i++) {
-					if(username.equals(usuarios.get(i))) 
-						index = i;
+					//usuarios.get(i).getNome()
+					if(username.equals(usuarios.get(i).getUsername())) 
+						index = i;	
 				}
 				
 				if(index == -1) 
 					System.out.println("Este username nao se refere a algum usuario do sistema");
 				else {
 					System.out.print("Digite a sua senha: ");
-					senha = entrada.nextLine();
+					senha = entrada.next();
 					if (!senha.equals(usuarios.get(index).getSenha()))
 						System.out.println("Senha invalida!");
 					else {
