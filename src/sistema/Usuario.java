@@ -6,20 +6,20 @@ public class Usuario {
 	private String nome;
 	private String sobrenome;
 	private String username;
-	private String login;
+	//private String login;
 	private String senha;
 	private String sobre;
 	private ArrayList<Usuario> amigos = new ArrayList<Usuario>();
 	
 	
-	public Usuario(String nome, String sobrenome, String username, String login, String senha, String sobre) {
+	public Usuario(String nome, String sobrenome, String username, String senha) {
 		super();
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.username = username;
-		this.login = login;
+		//this.login = login;
 		this.senha = senha;
-		this.sobre = sobre;
+		//this.sobre = sobre;
 	}
 	
 	public String getNome() {

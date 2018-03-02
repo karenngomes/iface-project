@@ -12,8 +12,8 @@ public class Main {
 		
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
 		
-		Usuario nome1 = new Usuario("Karen", "Gomes", "karengomes", "kngs", "");
-		Usuario nome2 = new Usuario("Joao", "Silva", "joaozinho", "silva123", "");
+		Usuario nome1 = new Usuario("Karen", "Gomes", "karengomes", "kngs");
+		Usuario nome2 = new Usuario("Joao", "Silva", "joaozinho", "silva123");
 		
 		usuarios.add(nome1);
 		usuarios.add(nome2);
@@ -35,10 +35,23 @@ public class Main {
 			int opcao = entrada.nextInt();
 			flag = opcao;
 			
-			
-			
 			switch(opcao) {
-			case 1:
+				case 1:
+					
+					System.out.println("Criando Conta");
+					System.out.println("Digite o nome do usuario:");
+					String nome = entrada.nextLine();
+					System.out.println("Digite o sobrenome do usuario:");
+					String sobrenome = entrada.nextLine();
+					System.out.println("Digite o username do usuario:");
+					String username = entrada.nextLine();
+					System.out.println("Digite a senha do usuario:");
+					String senha = entrada.nextLine();
+					
+					Usuario usuarioNovo = new Usuario(nome, sobrenome, username, senha);
+					
+					usuarios.add(usuarioNovo);
+					System.out.printf("Usuario criado com sucesso!\n\nSeja bem-vindo %s!", nome);
 				
 					break;
 					
@@ -56,9 +69,9 @@ public class Main {
 			case 8:
 				System.out.println("Opcao remover conta");
 				System.out.print ("Digite o username do usuario que deseja remover: ");
-				String username = entrada.nextLine();
+				//String username = entrada.nextLine();
 				System.out.print("Digite a senha: ");
-				String senha = entrada.nextLine();
+				//String senha = entrada.nextLine();
 				break;
 			default:
 				break;
